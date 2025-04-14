@@ -37,5 +37,3 @@ features = pd.DataFrame({
 fig_feat = px.bar(features, x='Importance', y='Feature', orientation='h', title="Top Predictive Features", color='Importance', color_continuous_scale='Blues')
 st.plotly_chart(fig_feat, use_container_width=True)
 
-st.markdown("### 🧾 Supplier Risk Table")
-st.dataframe(data.style.background_gradient(cmap='Reds', subset=['Risk Score']))
