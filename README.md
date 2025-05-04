@@ -1,5 +1,4 @@
-# Create the README.md content as a string and save it as a markdown file
-readme_content = """
+
 # 🚀 Supply Chain Risk Intelligence Platform
 
 Welcome to the **Supply Chain Risk Assessment & Supplier Suitability Dashboard**, a powerful visual analytics and ML-powered tool designed to help organizations proactively monitor, assess, and mitigate supply chain disruptions.
