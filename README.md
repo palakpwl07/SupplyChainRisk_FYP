@@ -1,65 +1,110 @@
-# 🌍 Supply Chain Risk Assessment using Ensemble Machine Learning
+# Create the README.md content as a string and save it as a markdown file
+readme_content = """
+# 🚀 Supply Chain Risk Intelligence Platform
 
-**Author:** Palak Porwal  
-**Institution:** Nanyang Technological University (NTU)  
-**Thesis Title:** AI in Risk Management: Using AI for Proactive Risk Mitigation  
-**Specialization:** Smart Manufacturing and Digital Factory  
-**Date:** April 2025
+Welcome to the **Supply Chain Risk Assessment & Supplier Suitability Dashboard**, a powerful visual analytics and ML-powered tool designed to help organizations proactively monitor, assess, and mitigate supply chain disruptions.
 
----
+This interactive platform consists of **three integrated modules** that provide end-to-end insights using **ensemble machine learning**, **geopolitical risk data**, and **supplier-specific reliability metrics**.
 
-## 📘 Project Overview
-
-This project implements a **stacked ensemble learning model** to proactively assess supply chain risk — with a focus on predicting climate-related delivery delays using a data-driven approach. The pipeline integrates three base regression models: **Random Forest**, **Gradient Boosting**, and **XGBoost**, which are fused into a meta-model using **Ridge Regression** for superior generalization.
-
-The goal is to provide **robust, interpretable, and business-usable insights** into risk likelihood, enabling early interventions and better resilience planning.
+> ⚠️ **Deployment Note**: Due to the large size of the dataset (hundreds of MBs across INFORM and supplier logs), the dashboard **cannot be deployed online**. However, this repository includes:
+>
+> ✅ 3 annotated **screenshots**  
+> 🎥 1 **demo video** walkthrough  
+> 📂 Full **source code** for local deployment
 
 ---
 
-## 📂 Folder Structure
+## 📷 Visual Snapshots
+
+| 📌 Dashboard | 🔍 Description |
+|-------------|----------------|
+| **Supply Chain Performance Dashboard** | Presents disruption likelihood, delay probability, and supplier route risks in a single view. It includes a risk distribution bar chart, correlation heatmap, and interactive scatter plots. Ideal for identifying which risk factors are interrelated. |
+| **INFORM Risk Index Map** | Global choropleth visualizing country-specific disaster vulnerability scores. Built with INFORM/EMDAT datasets, it supports comparison across up to 10 countries. |
+| **Supplier Suitability Chatbot** | AI-powered chatbot lets you input supplier features (like cargo condition or delivery delays) and returns a risk score with interpretability. Great for sourcing and procurement teams. |
 
 ---
 
-## 🧠 Key Concepts
+## 🎥 Demo Video
 
-- **Ensemble Modeling**: Stacked generalization using multiple ML regressors and a meta-learner
-- **Business Feature Engineering**: Includes derived metrics such as inventory-to-lead-time ratio, resilience index, and volatility-risk interactions
-- **Robust Evaluation**: Cross-validation with RMSE, MAE, and R² scores reported
-- **Dimensionality Reduction**: PCA applied post-polynomial expansion for efficiency
-- **Pipeline Architecture**: Fully modular `Pipeline` and `ColumnTransformer` structures for scalability
+The attached walkthrough video (`walkthrough.mp4`) demonstrates:
+- How users can interact with each module
+- How the chatbot evaluates risk
+- Insights from correlation and disruption metrics
+- Use cases like comparing USA vs China vs India supplier networks
+
+> **Estimated Watch Time**: 3–4 mins  
+> **Recommended For**: Stakeholders, recruiters, collaborators
+
+---
+
+## 🧭 Module Overview
+
+### 📊 1. Supply Chain Performance Dashboard
+
+This module visualizes key metrics for any selected product (e.g., P0005), such as:
+- 📈 **Disruption Likelihood Score**
+- ⏳ **Delay Probability**
+- 🚚 **Route Risk & Supplier Reliability**
+- 📉 **Delivery Time Deviations**
+
+**Widgets & Plots:**
+- Risk classification histogram (High / Moderate / Low)
+- Heatmap of correlated risk factors
+- Scatter plots to explore delivery patterns
+
+🧠 **Purpose**: Quickly identify which routes, suppliers, or variables pose the most threat to operational continuity.
+
+📂 **Key Files**:
+- `dashboard.py`
+- `supplierdata.py`
+
+🖼️ **Screenshot**:  
+![Supply Chain Dashboard Screenshot](./Screenshot%202025-05-02%20104052.png)
 
 ---
 
-## 📊 Datasets Used
+### 🌍 2. Global INFORM Risk Index Dashboard
 
-The following datasets were compiled, cleaned, and merged to form the `final_cleaned_dataset.csv`:
+Interactive choropleth visualization based on INFORM’s global disaster and conflict datasets.
 
-| Dataset Name | Description |
-|--------------|-------------|
-| `emdat_disaster_impact.csv` | Contains historical records of disaster occurrences and their socio-economic impacts (Source: EM-DAT) |
-| `inform_climate_risk_2020_2025.csv` | INFORM Risk Index with sub-national scores related to climate vulnerability and exposure 
+**Functionality**:
+- Select risk indicator (e.g., **Physical exposure to tsunami**)
+- Choose year (e.g., 2025)
+- Compare up to 10 countries by score
+- See **Global Average**, **Highest**, and **Lowest** countries
+
+🧠 **Purpose**: Adds geopolitical and climate exposure risk context to supplier selection and transport route decisions.
+
+📂 **Key Files**:
+- `informtrend.py`
+- `risk_integration_model.py`
+
+🖼️ **Screenshot**:  
+![INFORM Risk Dashboard Screenshot](./Screenshot%202025-05-02%20104130.png)
 
 ---
-## 🔎 Live Dashboard
 
-The risk assessment model is deployed in a **user-friendly Streamlit interface** that allows business stakeholders to:
+### 🤖 3. Supplier Suitability Chatbot
 
-- Interactively adjust feature values (e.g., inventory days, supplier reliability)
-- View predicted risk scores in real-time
-- Access simplified decision support visuals
-- Use dropdown filters and sliders without needing to understand model internals
+This chatbot helps assess a supplier's risk level using interpretable inputs like:
+- 📦 Cargo Condition Score
+- ⏱️ Delivery Time Deviation
+- 💰 Shipping Costs
+- 📈 Historical Demand
 
-📍 **Try it now** → [https://scdashboard.streamlit.app/](https://scdashboard.streamlit.app/)
+Outputs a **Risk Score (0–1)** and classifies it as Low / Moderate / High.
 
-This is ideal for:
-- Procurement teams
-- Logistics managers
-- Risk analysts and resilience strategists
+🧠 **Purpose**: Empower sourcing teams to perform intelligent supplier evaluations in seconds.
 
+📂 **Key Files**:
+- `chatbot.py` – Interface logic  
+- `supplier_model_predictor.py` – Risk model inference  
+- `utils.py` – Feature engineering & scoring  
 
-## ⚙️ How to Run
+🖼️ **Screenshot**:  
+![Supplier Chatbot Screenshot](./Screenshot%202025-05-02%20141118.png)
 
-1. **Install requirements**
+---
 
-   ```bash
-   pip install -r requirements.txt
+## 🧱 Directory Structure
+
