@@ -53,10 +53,6 @@ This module visualizes key metrics for any selected product (e.g., P0005), such 
 
 🧠 **Purpose**: Quickly identify which routes, suppliers, or variables pose the most threat to operational continuity.
 
-📂 **Key Files**:
-- `dashboard.py`
-- `supplierdata.py`
-
 🖼️ **Screenshot**:  
 ![Supply Chain Dashboard Screenshot](./Screenshot%202025-05-02%20104052.png)
 
@@ -73,10 +69,6 @@ Interactive choropleth visualization based on INFORM’s global disaster and con
 - See **Global Average**, **Highest**, and **Lowest** countries
 
 🧠 **Purpose**: Adds geopolitical and climate exposure risk context to supplier selection and transport route decisions.
-
-📂 **Key Files**:
-- `informtrend.py`
-- `risk_integration_model.py`
 
 🖼️ **Screenshot**:  
 ![INFORM Risk Dashboard Screenshot](./Screenshot%202025-05-02%20104130.png)
@@ -95,15 +87,9 @@ Outputs a **Risk Score (0–1)** and classifies it as Low / Moderate / High.
 
 🧠 **Purpose**: Empower sourcing teams to perform intelligent supplier evaluations in seconds.
 
-📂 **Key Files**:
-- `chatbot.py` – Interface logic  
-- `supplier_model_predictor.py` – Risk model inference  
-- `utils.py` – Feature engineering & scoring  
 
 🖼️ **Screenshot**:  
 ![Supplier Chatbot Screenshot](./Screenshot%202025-05-02%20141118.png)
 
----
 
-## 🧱 Directory Structure
 
