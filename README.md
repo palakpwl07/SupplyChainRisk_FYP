@@ -8,7 +8,6 @@ This interactive platform consists of **three integrated modules** that provide 
 > ⚠️ **Deployment Note**: Due to the large size of the dataset (hundreds of MBs across INFORM and supplier logs), the dashboard **cannot be deployed online**. However, this repository includes:
 >
 > ✅ 3 annotated **screenshots**  
-> 🎥 1 **demo video** walkthrough  
 > 📂 Full **source code** for local deployment
 
 ---
