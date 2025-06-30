@@ -22,19 +22,6 @@ This interactive platform consists of **three integrated modules** that provide 
 
 ---
 
-## 🎥 Demo Video
-
-The attached walkthrough video (`walkthrough.mp4`) demonstrates:
-- How users can interact with each module
-- How the chatbot evaluates risk
-- Insights from correlation and disruption metrics
-- Use cases like comparing USA vs China vs India supplier networks
-
-> **Estimated Watch Time**: 3–4 mins  
-> **Recommended For**: Stakeholders, recruiters, collaborators
-
----
-
 ## 🧭 Module Overview
 
 ### 📊 1. Supply Chain Performance Dashboard
